@@ -102,7 +102,7 @@
       </div>
     </div>
 
-    <div class="py-12 bg-gray-50">
+    <div class="py-12 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="lg:text-center">
           <h2
@@ -205,6 +205,65 @@
         </div>
       </div>
     </div>
+
+    <div class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:text-center">
+          <h2
+            class="text-base text-blue-600 font-semibold tracking-wide uppercase"
+          >
+            Registration
+          </h2>
+          <p
+            class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+          >
+            Join the Civic Identity Registry
+          </p>
+          <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+            Click the button below to start your registration process
+          </p>
+        </div>
+
+        <div class="mt-10 flex justify-center">
+          <button
+            onclick="openRegistrationEmail()"
+            class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          >
+            Start Registration
+          </button>
+        </div>
+
+        <div class="mt-8 max-w-2xl mx-auto">
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-lg font-medium text-gray-900 mb-4">
+              Registration Instructions
+            </h3>
+            <p class="text-gray-600 mb-4">
+              To register for a CIR ID, you'll need to send an email with the
+              following information:
+            </p>
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+              <li>First Name</li>
+              <li>Last Name</li>
+              <li>Sex (M/F)</li>
+              <li>Date of Birth</li>
+              <li>A clear photo of yourself (as an attachment)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openRegistrationEmail() {
+        const emailBody = `Please fill in your information below:`;
+
+        const mailtoLink = `mailto:register@civicidentity.org?subject=CIR Registration&body=${encodeURIComponent(
+          emailBody
+        )}`;
+        window.location.href = mailtoLink;
+      }
+    </script>
 
     <footer class="bg-white">
       <div
